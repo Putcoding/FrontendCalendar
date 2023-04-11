@@ -1,0 +1,99 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 600px;
+  width: 400px;
+  background-color: whitesmoke;
+  padding: 0 60px;
+
+}
+
+.Calendar{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  height: auto;
+  width: 400px;
+  background-color: whitesmoke;
+  padding: 20px 60px;
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  color: dimgray;
+}
+input{
+  text-align: center;
+  height: 50px;
+}
+
+.aboutButton{
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: aliceblue;
+  color: black;
+  text-decoration: none;
+  text-transform: lowercase;
+
+
+
+}
+.aboutButton:hover{
+  background-color: aquamarine;
+}
+.loginButton{
+  width: 100%;
+  height: 50px;
+  background-color: aliceblue;
+  box-shadow: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.googleButton{
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png");
+  width: 100%;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: 0;
+}
+.loginButton:hover{
+  background-color: aquamarine;
+}
+.googleButton:hover{
+  background-color: antiquewhite;
+}
