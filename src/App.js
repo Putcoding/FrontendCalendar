@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Calendar from "./Pages/Calendar";
 import RootLayout from "./Pages/Root";
+
 window.localStorage.setItem("login_key", 0);
 
 const router = createBrowserRouter([
