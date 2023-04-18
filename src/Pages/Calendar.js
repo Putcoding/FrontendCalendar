@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
+import AuthContext from "../store/auth";
 
 function Calendar() {
-  const [goToLogin, setGoToLogin] = useState(false);
+  const context = useContext(AuthContext);
 
-  if (goToLogin || localStorage.getItem("login_key") === 0) {
+  if (!context.isLoggedIn || localStorage.getItem("login_key") === 0) {
     window.localStorage.setItem("login_key", 0);
     return <Navigate to="/" />;
   }
@@ -14,9 +15,7 @@ function Calendar() {
       <p>you are logged in!</p>
       <button
         className="loginButton"
-        onClick={() => {
-          setGoToLogin(true);
-        }}
+        onClick={context.logoutHandler}
       >
         logout
       </button>
