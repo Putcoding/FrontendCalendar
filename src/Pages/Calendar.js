@@ -6,17 +6,13 @@ function Calendar() {
   const context = useContext(AuthContext);
 
   if (!context.isLoggedIn || localStorage.getItem("login_key") === 0) {
-    window.localStorage.setItem("login_key", 0);
     return <Navigate to="/" />;
   }
 
   return (
     <form className="Calendar">
       <p>you are logged in!</p>
-      <button
-        className="loginButton"
-        onClick={context.logoutHandler}
-      >
+      <button className="loginButton" onClick={context.onLogout}>
         logout
       </button>
     </form>

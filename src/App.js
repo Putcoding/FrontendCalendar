@@ -3,10 +3,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Calendar from "./Pages/Calendar";
 import RootLayout from "./Pages/Root";
-import AuthContext from "./store/auth";
-import { useState } from "react";
-
-window.localStorage.setItem("login_key", 0);
 
 const router = createBrowserRouter([
   {
@@ -24,27 +20,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const loginHandler = () => {
-    setIsLoggedIn(true);
-  };
-
-  const logoutHandler = () => {
-    setIsLoggedIn(false);
-  };
-
-  return (
-    <AuthContext.Provider
-      value={{
-        isLoggedIn: isLoggedIn,
-        loginHandler: loginHandler,
-        logoutHandler: logoutHandler,
-      }}
-    >
-      <RouterProvider router={router} />
-    </AuthContext.Provider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

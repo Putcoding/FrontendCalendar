@@ -7,9 +7,9 @@ function Login() {
   const isLoggedIn = context.isLoggedIn;
 
   if (isLoggedIn) {
-    localStorage.setItem("login_key", 1);
     return <Navigate to="/calendar" />;
   }
+
   return (
     <form>
       <header>
@@ -23,7 +23,7 @@ function Login() {
       <p>password:</p>
       <input type="password" placeholder="password" />
       <p></p>
-      <button className="loginButton" onClick={context.loginHandler}>
+      <button className="loginButton" onClick={context.onLogin}>
         Login
       </button>
       <p>
@@ -31,7 +31,7 @@ function Login() {
       </p>
       <p></p>
       <p></p>
-      <button className="googleButton" onClick={context.loginHandler}>
+      <button className="googleButton" onClick={context.onLogin}>
         Sign in with Google
       </button>
     </form>
