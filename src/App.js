@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Pages/Login";
 import Calendar from "./Pages/Calendar";
 import RootLayout from "./Pages/Root";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Login />,
+        element: <Home />,
       },
       { path: "login", element: <Login /> },
       { path: "calendar", element: <Calendar /> },

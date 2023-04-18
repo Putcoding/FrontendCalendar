@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import AuthContext from "../store/auth";
+import PlannerGrid from "../Components/PlannerGrid";
 
 function Calendar() {
   const context = useContext(AuthContext);
@@ -10,12 +11,9 @@ function Calendar() {
   }
 
   return (
-    <form className="Calendar">
-      <p>you are logged in!</p>
-      <button className="loginButton" onClick={context.onLogout}>
-        logout
-      </button>
-    </form>
+    <section>
+      <PlannerGrid></PlannerGrid>
+    </section>
   );
 }
 
