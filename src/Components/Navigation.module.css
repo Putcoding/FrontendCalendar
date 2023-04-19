@@ -1,0 +1,22 @@
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+  color: red;
+}
