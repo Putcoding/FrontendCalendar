@@ -14,12 +14,6 @@ const PlannerGrid = () => {
   const currentDate = new Date();
   const currentDay = currentDate.getDay();
 
-  const addDays = (currentDate, days) => {
-    let result = currentDate;
-    result.setDate(result.getDate() + days);
-    return result;
-  };
-
   let nextSevenDays = [];
   let dayOffset = 0;
 
