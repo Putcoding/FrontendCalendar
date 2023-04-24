@@ -5,7 +5,7 @@ import Calendar from "./Pages/Calendar";
 import RootLayout from "./Pages/Root";
 import Home from "./Pages/Home";
 
-import { loader as todosLoader } from "./Components/PlannerItem";
+import { loader as todosLoader } from "./Components/Calendar/PlannerItem";
 
 const router = createBrowserRouter([
   {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import AuthContext from "../store/auth";
-import PlannerGrid from "../Components/PlannerGrid";
+import PlannerGrid from "../Components/Calendar/PlannerGrid";
 
 function Calendar() {
   const context = useContext(AuthContext);

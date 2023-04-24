@@ -1,5 +1,5 @@
 import PlannerItem from "./PlannerItem";
-import classes from "./PlannerGrid.module.css";
+import classes from "./Styles/PlannerGrid.module.css";
 
 const PlannerGrid = () => {
   const daysOfTheWeek = [
