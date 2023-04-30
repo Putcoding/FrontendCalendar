@@ -39,9 +39,7 @@ const PlannerItem = (props) => {
         notes: response[1].data,
         todos: response[2].data,
       };
-
-      console.log("RESULT OF FETCH: ");
-      console.log(result);
+      
       if (result) {
         setData(result);
       }

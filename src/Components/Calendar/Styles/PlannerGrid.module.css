@@ -2,5 +2,22 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0;
-    width: 100%;
+    width: 100vw;
+}
+
+.dates {
+    color: azure;
+    text-align: center;
+    font-size: 3rem
+}
+
+.change-date {
+    padding: 1rem;
+    margin: 0 2rem;
+    background-color: rgb(11, 77, 144);
+
+}
+
+.change-date:hover {
+    cursor: pointer;
 }

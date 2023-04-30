@@ -1,9 +1,15 @@
 .planner-item {
     margin: 1rem;
     color: white;
+    width: 100%;
+}
+
+.planner-item ol {
+    padding: 0;
 }
 
 .day {
-    top: 5rem;
     margin: 2rem 0;
+    text-align: center;
+    border: 1px solid white;
 }

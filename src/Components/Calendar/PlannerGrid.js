@@ -4,8 +4,8 @@ import classes from "./Styles/PlannerGrid.module.css";
 import DateContext from "../../store/date";
 
 const PlannerGrid = () => {
- const dateContext = useContext(DateContext)
- const currentDate = dateContext.date;
+  const dateContext = useContext(DateContext);
+  const currentDate = dateContext.date;
 
   const daysOfTheWeek = [
     "Sunday",
@@ -18,6 +18,9 @@ const PlannerGrid = () => {
   ];
   const currentDay = currentDate.getDay();
 
+  let lastDate = new Date(currentDate);
+  lastDate.setDate(currentDate.getDate() + 5);
+
   let nextSevenDays = [];
   let dayOffset = 0;
 
@@ -29,16 +32,26 @@ const PlannerGrid = () => {
   }
 
   return (
-    <ol className={classes["planner-grid"]}>
-      {nextSevenDays.map((day) => (
-        <PlannerItem
-          day={day.dayName}
-          offset={day.dayOffset}
-          currentDate={currentDate}
-          key={Math.random()}
-        />
-      ))}
-    </ol>
+    <>
+      <h2 className={classes.dates}>
+        {" "}
+        <span onClick={dateContext.onDateBackward} className={classes["change-date"]}>-5 days </span>
+        {currentDate.toLocaleDateString("pl-PL") +
+          " - " +
+          lastDate.toLocaleDateString("pl-PL")}
+        <span onClick={dateContext.onDateForward} className={classes["change-date"]}> +5 days</span>
+      </h2>
+      <ol className={classes["planner-grid"]}>
+        {nextSevenDays.map((day) => (
+          <PlannerItem
+            day={day.dayName}
+            offset={day.dayOffset}
+            currentDate={currentDate}
+            key={Math.random()}
+          />
+        ))}
+      </ol>
+    </>
   );
 };
 
