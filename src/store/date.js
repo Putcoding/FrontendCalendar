@@ -7,10 +7,18 @@ const DateContext = React.createContext({
 });
 
 export const DateContextProvider = (props) => {
-  const [date, setDate] = useState(new Date());
+  const [date, setTheDate] = useState(new Date());
 
-  const dateForwardHandler = () => {};
-  const onDateBackwardHandler = () => {};
+  const dateForwardHandler = () => {
+    let dateToUpdate = new Date(date)
+    dateToUpdate.setDate(date.getDate() + 5);
+    return setTheDate(dateToUpdate)
+  };
+  const onDateBackwardHandler = () => {
+    let dateToUpdate = new Date(date)
+    dateToUpdate.setDate(date.getDate() - 5);
+    return setTheDate(dateToUpdate)
+  };
 
   return (
     <DateContext.Provider

@@ -1,11 +1,14 @@
+import classes from "./Styles/NoteItem.module.css"
+
 const NoteItem = (props) => {
   const noteTitle = props.title;
   const noteText = props.text;
 
   return (
-    <div>
-      <h2>Note title: {noteTitle}</h2>
-      <p>Note content: {noteText}</p>
+    <div className={classes["single-note"]}>
+      <h2>title: <span>{noteTitle}</span></h2>
+      <hr></hr>
+      <p>{noteText}</p>
     </div>
   );
 };

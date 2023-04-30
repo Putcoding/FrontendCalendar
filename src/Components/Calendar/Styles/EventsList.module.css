@@ -1,3 +1,15 @@
 .events-list {
     
 }
+
+.add-event-text {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    color: black;
+}
+
+.add-event-text:hover {
+    cursor: pointer;
+    background-color: rgb(193, 193, 193);
+}
