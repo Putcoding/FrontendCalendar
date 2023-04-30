@@ -39,7 +39,7 @@ const PlannerItem = (props) => {
         notes: response[1].data,
         todos: response[2].data,
       };
-      
+
       if (result) {
         setData(result);
       }

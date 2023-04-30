@@ -1,4 +1,6 @@
 .single-note {
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     padding: 1rem;
+    background-color: white;
+    color: black;
 }
