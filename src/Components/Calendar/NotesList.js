@@ -5,7 +5,7 @@ const NotesList = (props) => {
   return (
     <ol>
       {notes.map((note) => (
-        <NoteItem title={note.title} text={note.text} />
+        <NoteItem title={note.title} text={note.text} key={Math.random()} />
       ))}
     </ol>
   );
