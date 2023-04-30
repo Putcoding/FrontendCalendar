@@ -3,10 +3,14 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../store/auth";
 
 import classes from "./Navigation.module.css";
+import DateContext from "../store/date";
 
 const Navigation = () => {
   const context = useContext(AuthContext);
   const isLoggedIn = context.isLoggedIn;
+
+  const date  = useContext(DateContext);
+  console.log(date.date)
 
   return (
     <nav className={classes["nav-bar"]}>

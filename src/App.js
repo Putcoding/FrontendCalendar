@@ -5,8 +5,6 @@ import Calendar from "./Pages/Calendar";
 import RootLayout from "./Pages/Root";
 import Home from "./Pages/Home";
 
-import { loader as todosLoader } from "./Components/Calendar/PlannerItem";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +15,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "login", element: <Login /> },
-      { path: "calendar", element: <Calendar />, loader: todosLoader },
+      { path: "calendar", element: <Calendar /> },
     ],
   },
 ]);

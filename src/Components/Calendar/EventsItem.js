@@ -1,3 +1,5 @@
+import classes from "./Styles/EventsItem.module.css"
+
 const EventsItem = (props) => {
   const eventDescription = props.description;
   const eventDetails = props.details;
