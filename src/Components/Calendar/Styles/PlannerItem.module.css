@@ -1,5 +1,5 @@
 .planner-item {
-    margin: 1rem;
+    margin: 0.5rem;
     color: white;
     width: 100%;
 }
@@ -18,7 +18,7 @@
     padding: 1rem 2rem;
     margin: 1rem 0;
     height: 100px;
-    width: 130px;
+    width: 110px;
     text-align: center;
     align-items: center;
     background-color: rgb(30, 30, 30);

@@ -35,11 +35,11 @@ const PlannerGrid = () => {
     <>
       <h2 className={classes.dates}>
         {" "}
-        <span onClick={dateContext.onDateBackward} className={classes["change-date"]}>-5 days </span>
+        <span onClick={dateContext.onDateBackward} className={classes["change-date"]}>-7 days </span>
         {currentDate.toLocaleDateString("pl-PL") +
           " - " +
           lastDate.toLocaleDateString("pl-PL")}
-        <span onClick={dateContext.onDateForward} className={classes["change-date"]}> +5 days</span>
+        <span onClick={dateContext.onDateForward} className={classes["change-date"]}> +7 days</span>
       </h2>
       <ol className={classes["planner-grid"]}>
         {nextSevenDays.map((day) => (
