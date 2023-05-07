@@ -6,7 +6,7 @@ const NoteItem = (props) => {
 
   return (
     <div className={classes["single-note"]}>
-      <h2>title: <span>{noteTitle}</span></h2>
+      <h2 className={classes["note-title"]}>title: <span>{noteTitle}</span></h2>
       <hr></hr>
       <p>{noteText}</p>
     </div>

@@ -49,12 +49,6 @@ const Navigation = () => {
             </NavLink>
           </li>
         )}
-        {isLoggedIn && (
-          <li>
-            <button onClick={context.onLogout}>Logout</button>
-          </li>
-        )}
-
         <li>
           <NavLink
             className={({ isActive }) =>
@@ -65,6 +59,11 @@ const Navigation = () => {
             My Calendar
           </NavLink>
         </li>
+        {isLoggedIn && (
+          <li>
+            <button className={classes["logout-button"]} onClick={context.onLogout}>Logout</button>
+          </li>
+        )}
       </ul>
     </nav>
   );
