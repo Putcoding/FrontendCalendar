@@ -24,8 +24,8 @@ const PlannerGrid = () => {
   let nextSevenDays = [];
   let dayOffset = 0;
 
-  for (let i = currentDay; i <= currentDay + 4; i++) {
-    let dayIndex = i % 5;
+  for (let i = currentDay; i <= currentDay + 6; i++) {
+    let dayIndex = i % 7;
     let dayName = daysOfTheWeek[dayIndex];
     nextSevenDays.push({ dayName, dayOffset });
     dayOffset++;
