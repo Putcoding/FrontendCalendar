@@ -55,10 +55,42 @@ const PlannerItem = (props) => {
       {data.events ? (
         <EventsList events={data.events} />
       ) : (
-        <p>Loading events...</p>
+        <div className={classes.loading}>
+          <div className={classes["lds-ring"]}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          Loading events...
+        </div>
       )}
-      {data.notes ? <NotesList notes={data.notes} /> : <p>Loading notes...</p>}
-      {data.todos ? <TodosList todos={data.todos} /> : <p>Loading todos...</p>}
+      {data.notes ? (
+        <NotesList notes={data.notes} />
+      ) : (
+        <div className={classes.loading}>
+          <div className={classes["lds-ring"]}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          Loading notes...
+        </div>
+      )}
+      {data.todos ? (
+        <TodosList todos={data.todos} />
+      ) : (
+        <div className={classes.loading}>
+          <div className={classes["lds-ring"]}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          Loading todos...
+        </div>
+      )}
     </div>
   );
 };
